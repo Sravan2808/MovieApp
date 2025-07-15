@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "../../utils/axios";
-import {IMG_TMDB,NO_IMG} from "../../utils/constants"
+import { IMG_TMDB, NO_IMG } from "../../utils/constants";
 
 const Topnav = () => {
   const [query, setquery] = useState("");
@@ -19,7 +19,7 @@ const Topnav = () => {
     GetSearches();
   }, [query]);
   return (
-    <div className="w-full h-[10vh] relative flex justify-start items-center ml-[15%]">
+    <div className="w-full h-[10vh] relative flex justify-start items-center pl-[20%]">
       <i className="text-zinc-400 text-xl ri-search-line"></i>
       <input
         onChange={(e) => setquery(e.target.value)}
@@ -35,7 +35,7 @@ const Topnav = () => {
         ></i>
       )}
 
-      <div className="w-[50%]  max-h-[50vh] absolute bg-zinc-200 top-[90%] overflow-auto rounded">
+      <div className="w-[50%]  max-h-[50vh] absolute bg-zinc-200 top-[100%] left-[20%] overflow-auto rounded">
         {searches?.map((s, i) => (
           <Link
             key={s.id || i}
