@@ -3,7 +3,6 @@ import { IMG_TMDB } from "../../utils/constants";
 import { Link } from "react-router-dom";
 
 const Header = ({ data }) => {
-  console.log(data);
 
   return (
     <div
