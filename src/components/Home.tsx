@@ -6,6 +6,7 @@ import axios from "../utils/axios";
 import Header from "./templates/Header";
 import HorizontalCards from "./templates/HorizontalCards";
 import DropDown from "./templates/DropDown";
+import Loading from "./templates/Loading";
 
 const Home = () => {
   document.title = "Homepage";
@@ -56,7 +57,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <h1>Loading...</h1>
+    <Loading />
   );
 };
 
